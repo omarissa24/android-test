@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/layout_header" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/header"
+        android:layout_marginTop="16dp"
+        android:text="Welcome to My ToDoList"
+        android:textSize="24sp"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/tvAuthor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/header"
+        android:layout_marginTop="70dp"
+        android:text="An application by Omar Issa"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:id="@+id/etLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvAuthor"
+        android:layout_marginTop="150dp"
+        android:hint="Login as:" />
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/etLogin"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="#6200EE"
+        android:text="Login"
+        android:textColor="#FFFFFF"
+        android:layout_centerHorizontal="true" />
+
+<!--    add text to the left of image saying Made by: -->
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnLogin"
+        android:layout_marginTop="32dp"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:id="@+id/tvMadeBy"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Made at: "
+            android:textSize="16sp"
+            android:gravity="center_vertical"
+            android:layout_centerHorizontal="true" />
+
+        <ImageView
+            android:id="@+id/ivEpitaLogo"
+            android:layout_width="154dp"
+            android:layout_height="153dp"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_marginBottom="12dp"
+            android:contentDescription="@string/epita_logo_desc"
+            android:src="@drawable/epita_logo" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,80 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/layout_header"/>
+
+    <TextView
+        android:id="@+id/userGreeting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:textSize="24sp"
+        android:layout_marginTop="90dp"/>
+
+    <!-- Horizontal LinearLayout for statistics -->
+    <LinearLayout
+        android:id="@+id/statsLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/userGreeting"
+        android:layout_marginTop="16dp">
+
+        <TextView
+            android:id="@+id/totalItems"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/total_items"
+            android:textSize="18sp"
+            android:layout_marginEnd="16dp"/>
+
+<!--        make pending as red and done as green boxes-->
+
+        <TextView
+            android:id="@+id/totalPending"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/total_pending"
+            android:textSize="18sp"
+            android:layout_marginEnd="16dp"
+            android:padding="8dp"
+            android:background="#FF0000"
+            android:textColor="#FFFFFF"/>
+
+        <TextView
+            android:id="@+id/totalCompleted"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/total_completed"
+            android:textSize="18sp"
+            android:padding="8dp"
+            android:background="#008000"
+            android:textColor="#FFFFFF"/>
+
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/todoList"
+        android:layout_marginTop="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/statsLayout"/>
+
+    <Button
+        android:id="@+id/addItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Item"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="onAddTodoClick"
+        android:layout_marginBottom="16dp"/>
+
+
+
+
+
+</RelativeLayout>

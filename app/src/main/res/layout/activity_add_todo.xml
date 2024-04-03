@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <include layout="@layout/layout_header"/>
+
+    <EditText
+        android:id="@+id/etTodoItemText"
+        android:layout_width="match_parent"
+        android:layout_height="96dp"
+        android:layout_below="@id/header"
+        android:layout_marginTop="90dp"
+        android:hint="Please describe the task you have to do."
+        android:inputType="textMultiLine"
+        android:gravity="top|start"
+        android:layout_toLeftOf="@id/btnDeleteText"
+        android:padding="8dp"/>
+
+    <Button
+        android:id="@+id/btnDeleteText"
+        android:layout_width="wrap_content"
+        android:layout_height="96dp"
+        android:layout_alignTop="@id/etTodoItemText"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="8dp"
+        android:text="Del"
+        android:backgroundTint="#6200EE"
+        android:textColor="#FFFFFF"/>
+
+    <Button
+        android:id="@+id/btnValidate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Validate"
+        android:layout_below="@id/etTodoItemText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="#6200EE"
+        android:textColor="#FFFFFF"/>
+
+</RelativeLayout>

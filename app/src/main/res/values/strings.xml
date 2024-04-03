@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">MyTodoList</string>
+    <string name="epita_logo_desc">logo of epita</string>
+    <string name="user_greeting">Hello %1$s, here are your todos:</string>
+    <string name="total_items">Total Items: %1$d</string>
+    <string name="total_pending">%1$d To Do</string>
+    <string name="total_completed">%1$d Done</string>
+</resources>
